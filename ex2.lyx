@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass amsart
+\textclass extarticle
 \begin_preamble
 \usepackage{xcolor}
 \pagecolor[rgb]{0.17,0.17,0.17} %black
@@ -12,6 +12,23 @@
 
 \newfontfamily\mylistingsfont{Space Mono}
 \definecolor{lbcolor}{rgb}{0.2,0.2,0.2}
+
+\usepackage{amsfonts}
+
+
+\newcommand{\me}[1]{\equiv_{#1}}
+\newcommand{\s}{\hspace{.15cm}}
+\newcommand{\bs}{\s\s,\s\s}
+\newcommand{\ms}[1]{\underline{#1:}\\\tab}
+\newcommand{\mypart}[1]{\centerline{\textbf{Part #1:}}}
+\newcommand{\tab}[1][1cm]{\hspace*{#1}}
+\newcommand{\denom}[1]{\frac{1}{#1}}
+\newcommand{\Rmat}[1]{\mathbb{R}^{#1x#1}}
+\newcommand{\inv}[1]{#1^{-1}}
+
+\newcommand{\lamf}[1]{\lambda x.[#1]}
+
+\title{modern algebra hw1}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -56,8 +73,8 @@ figs-within-sections
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine basic
-\cite_engine_type default
+\cite_engine natbib
+\cite_engine_type authoryear
 \biblio_style plain
 \use_bibtopic false
 \use_indices false
@@ -83,7 +100,7 @@ figs-within-sections
 \quotes_style english
 \dynamic_quotes 0
 \papercolumns 1
-\papersides 1
+\papersides 2
 \paperpagestyle default
 \listings_params "basicstyle={\mylistingsfont},language={C++},backgroundcolor={\color{lbcolor}},showstringspaces=false"
 \tracking_changes false
@@ -95,8 +112,1182 @@ figs-within-sections
 
 \begin_body
 
+\begin_layout Title
+\paragraph_spacing other 5
+
+\size giant
+Modern Algebra HW2
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<row topspace="2cm">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size huge
+Yosef Goren - 211515606
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="1cm">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size huge
+Gur Telem - 206631848
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-Question 4
+Question
+\end_layout
+
+\begin_layout Subsection
+The claim is correct.
+ define: 
+\begin_inset Formula $D=:\{A|A\in\mathbb{R}^{nxn},|A|=1\}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+Closure
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ let: 
+\begin_inset Formula $A,B\in D$
+\end_inset
+
+.
+ 
+\begin_inset Formula $|A\cdot B|=1\cdot1=1\Rightarrow A\cdot B\in D$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+Associativity
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ Due to associativity in 
+\begin_inset Formula $\mathbb{R}^{nxn}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+Existance of identity element
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $I_{nxn}$
+\end_inset
+
+ is the identity element in relation to matrix multiplication, it is contained
+ in 
+\begin_inset Formula $D$
+\end_inset
+
+, since 
+\begin_inset Formula $|I_{nxn}|=1$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+Existance of inverse element
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ let: 
+\begin_inset Formula $A\in D$
+\end_inset
+
+.
+ 
+\begin_inset Formula $|A|=1\neq0\Rightarrow\exists A^{-1}\bs|AA^{-1}|=|I_{nxn}|=1\Rightarrow1=|A||A^{-1}|=1\cdot|A^{-1}|=|A^{-1}|\Rightarrow A^{-1}\in D$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The claim is incorrect.
+\end_layout
+
+\begin_layout Proof
+Since the closure to inverse element is not satisfied: 
+\begin_inset Formula 
+\[
+n:=1\bs A:=(2)\Rightarrow|A|=|2|=2\Rightarrow A^{-1}=(\denom{2})\bs|A^{-1}|=\denom{2}\neq2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The claim is correct.
+\end_layout
+
+\begin_layout Proof
+let 
+\begin_inset Formula $P:=\{A|A\in\Rmat{n}\in,|A|>0\}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $P\subseteq\Rmat{n}$
+\end_inset
+
+, we can show that 
+\begin_inset Formula $P$
+\end_inset
+
+ is a sub-group of 
+\begin_inset Formula $\Rmat{n}$
+\end_inset
+
+, and therefore it is a group itself.
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $P\neq\emptyset$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+|I_{nxn}|=1>0\Rightarrow I_{nxn}\in P
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+Closure to operation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ let: 
+\begin_inset Formula $A,B\in P$
+\end_inset
+
+.
+ 
+\begin_inset Formula $|A\cdot B|=|A|\cdot|B|>0\Rightarrow A\cdot B\in P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+Closure to inverse
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ let 
+\begin_inset Formula $A\in P$
+\end_inset
+
+.
+ 
+\begin_inset Formula $|A|>0\Rightarrow$
+\end_inset
+
+ A is regular 
+\begin_inset Formula $\Rightarrow\exists A^{-1}\in\Rmat{n}:(AA^{-1}=I_{nxn})$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+|AA^{-1}|=|I_{nxn}|=1\Rightarrow|A||A^{-1}|=1\Rightarrow|A^{-1}|=1\Rightarrow A^{-1}\in P
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{part}{0}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $H\cap K\neq\emptyset$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ Since 
+\begin_inset Formula $H$
+\end_inset
+
+ is a sub-group, it is also a group, thus 
+\begin_inset Formula $e\in H$
+\end_inset
+
+.
+ In the same way 
+\begin_inset Formula $e\in K$
+\end_inset
+
+, therefore 
+\begin_inset Formula $e\in H\cap K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+Closure to operator
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ let 
+\begin_inset Formula $a,b\in H\cap K$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+[H\leq G,K\leq G]\Rightarrow[a*b\in H,a*b\in K]\Rightarrow a*b\in H\cap K
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+Closure to inverse
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ let 
+\begin_inset Formula $a\in H\cap K$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+[H\leq G,K\leq G]\Rightarrow[\inv{a}\in G,\inv{a}\in K]\Rightarrow\inv{a}\in H\cap K
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+G:=(\mathbb{Z}^{2},+)\bs H:=\{(a,0)|a\in\mathbb{Z}\}\bs K:=\{(0,a)|a\in\mathbb{Z}\}
+\]
+
+\end_inset
+
+We will show that 
+\begin_inset Formula $H$
+\end_inset
+
+ is a group, and in the same way, 
+\begin_inset Formula $K$
+\end_inset
+
+ is also.
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $H\neq\emptyset$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+0\in\mathbb{Z}\Rightarrow(0,0)\in H\Rightarrow H\neq\emptyset
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+Closure to operator
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ let 
+\begin_inset Formula $(a,0),(b,0)\in H$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+[(a,0)+(b,0)=(a+b,0)\bs a+b\in\mathbb{Z}]\Rightarrow(a+b,0)\in H\Rightarrow(a,0)+(b,0)\in H
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+Closure to inverse
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ let 
+\begin_inset Formula $(a,b)\in H$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+a\in\mathbb{Z}\Rightarrow\inv{a}\in\mathbb{Z}\Rightarrow(-a,0)\in H\bs(a,0)+(-a,0)=(0,0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Now we show that 
+\begin_inset Formula $H\cap K$
+\end_inset
+
+ is not a sub-group of 
+\begin_inset Formula $\mathbb{Z}^{2}$
+\end_inset
+
+, since closure to operator is not satisfied.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $(1,0)\in H,(0,1)\in K$
+\end_inset
+
+.
+ but: 
+\begin_inset Formula $(1,0)+(0,1)=(1,1)\notin H\cap K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+proof: 
+\begin_inset Formula $H\cap K\leq G\Rightarrow K\subseteq H\vee H\subseteq K$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ assume: 
+\begin_inset Formula 
+\[
+[(\exists h\in H,k\notin K)\land(\exists k\in K,k\notin H)]\Rightarrow h,k\in H\cap K\Rightarrow h*k\in H\cap K\Rightarrow[h*k\in H\vee h*k\in K]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+if 
+\begin_inset Formula $h*k\in H$
+\end_inset
+
+, since 
+\begin_inset Formula $h\in H$
+\end_inset
+
+: 
+\begin_inset Formula $\inv{h}*(h*k)\in H\Rightarrow(\inv{h}*h)*k\in H\Rightarrow k\in H\Rightarrow$
+\end_inset
+
+ contradiction.
+ 
+\end_layout
+
+\begin_layout Proof
+if 
+\begin_inset Formula $h*k\in K$
+\end_inset
+
+, since 
+\begin_inset Formula $k\in K$
+\end_inset
+
+: 
+\begin_inset Formula $(h*k)*\inv{k}\in K\Rightarrow h*(k*\inv{k})\in K\Rightarrow h\in K\Rightarrow$
+\end_inset
+
+ contradiction.
+ 
+\end_layout
+
+\begin_layout Proof
+Therefore the assumption is incorrect and: 
+\begin_inset Formula 
+\[
+[(\forall h\in H,h\in K)\vee(\forall k\in K,k\in H)]\Rightarrow[H\subseteq K\vee K\subseteq H]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+proof: 
+\begin_inset Formula $H\subseteq K\vee K\subseteq H\Rightarrow H\cap K\leq G$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ WLOG 
+\begin_inset Formula $H\subseteq K$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $H\cap K=K\bs H\leq G\Rightarrow H\cap K\leq G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{part}{0}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G:=\{f_{a,b}|a,b\in\mathbb{R}\cap a\neq0\}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+Closure to operator
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ let 
+\begin_inset Formula $\lamf{f_{a,b}(x)},\lamf{f_{c,d}(x)}\in G$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\lamf{f_{a,b}(f_{c,d}(x))}=\lamf{af_{c,d}(x)+b}=\lamf{(ac)x+(ad+b)}\in G
+\]
+
+\end_inset
+
+(The last expression is in 
+\begin_inset Formula $G$
+\end_inset
+
+ since 
+\begin_inset Formula $ac\in\mathbb{R}\setminus\{0\}$
+\end_inset
+
+, and 
+\begin_inset Formula $(ad+b)\in\mathbb{R}$
+\end_inset
+
+).
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+Associativity
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ Due to regular associativity of function composition.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+Existence of identity element
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+0\neq1\in\mathbb{R},0\in\mathbb{R}\Rightarrow f_{1,0}\in G
+\]
+
+\end_inset
+
+let 
+\begin_inset Formula $f\in G$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+f_{1,0}\circ f=\lamf{1\cdot x+0}\circ f=\lamf{x}\circ f=f
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ms{
+\end_layout
+
+\end_inset
+
+Existence of inverse element
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ let 
+\begin_inset Formula $f_{a,b}\in G\Rightarrow f_{\denom{a},\frac{b}{a}}\in G$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+f_{a,b}\circ f_{\denom{a},\frac{b}{a}}=\lamf{(\denom{a}\cdot a)x+(\denom{a}\cdot b-\frac{b}{a})}=f_{1,0}=e
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The claim is correct
+\begin_inset Formula 
+\[
+1\in\mathbb{R}\Rightarrow f_{1,0}\in H_{1}\neq\emptyset
+\]
+
+\end_inset
+
+let 
+\begin_inset Formula $f_{1,a},f_{1,b}\in H_{1}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+f_{1,a}\circ\inv{f_{1,b}}=f_{1,a}\circ f_{\denom{1},-\frac{b}{1}}=f_{1,a}\circ f_{1,-b}=\lamf{(1\cdot1)x+1\cdot a-b}=f_{1,a-b}\in H_{1}\Rightarrow f_{1,a}\circ\inv{f_{1,b}}\in H_{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The claim is correct
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+1\in\mathbb{R}\Rightarrow H_{2}\neq\emptyset
+\]
+
+\end_inset
+
+let 
+\begin_inset Formula $f_{a,0},f_{b,0}\in H_{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+f_{a,0}\circ\inv{f_{b,0}}=f_{a,0}\circ f_{\denom{b},0}=\lamf{\frac{a}{b}x+0}=f_{\frac{a}{b},0}\in H_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The claim is incorrect
+\end_layout
+
+\begin_layout Proof
+Since closure to the operator is not satisfied.
+ 
+\begin_inset Formula 
+\[
+f_{-1,1}\in G\bs f_{-1,1}\circ f_{-1,1}=\lamf{(-1)(-1)x+(-1)\cdot1+1}=f_{1,0}\notin H_{3}\Rightarrow f_{-1,1}^{2}\notin H_{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question
 \end_layout
 
 \begin_layout Subsection
@@ -748,7 +1939,7 @@ Closed:
 \end_layout
 
 \begin_layout Enumerate
-Associatibity:
+Associativity:
 \begin_inset Formula $\left(\left(w,x\right)\odot\left(y,z\right)\right)\odot\left(t,d\right)=\left(\left(w*y,x\diamond z\right)\right)\odot\left(t,d\right)=\left(\left(w*y\right)*t,\left(x\diamond z\right)\diamond d\right)$
 \end_inset
 
@@ -839,7 +2030,144 @@ Thus, no such
 \end_layout
 
 \begin_layout Subsection
+RTP: 3 non trivial subgroups of 
+\begin_inset Formula $\mathbb{Z}_{2}\oplus\mathbb{Z}_{2}$
+\end_inset
 
+.
+\end_layout
+
+\begin_layout Proof
+Let's look at 
+\begin_inset Formula $\left\{ \left(0,0\right),\left(0,1\right)\right\} ,\left\{ \left(0,0\right),\left(1,0\right)\right\} $
+\end_inset
+
+ and 
+\begin_inset Formula $\left\{ \left(0,0\right),\left(1,1\right)\right\} $
+\end_inset
+
+ and 
+\begin_inset Formula $+$
+\end_inset
+
+ as the operation for the group 
+\begin_inset Formula $\mathbb{Z}_{2}$
+\end_inset
+
+.
+ Now we'll prove they're groups.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Closed: 
+\begin_inset Formula $\left(0,0\right)\odot\left(0,1\right)=\left(0+0,0+1\right)=\left(0+0,1+0\right)=\left(0,1\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+This is the same for 
+\begin_inset Formula $\left(0,0\right)\odot\left(1,1\right)=\left(1,1\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(0,0\right)\odot\left(1,0\right)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Also 
+\begin_inset Formula $1+1=0\left(\mod2\right)$
+\end_inset
+
+ and thus 
+\begin_inset Formula $\left(1,0\right)\odot\left(1,0\right)=\left(0,1\right)\odot\left(0,1\right)=\left(1,1\right)\odot\left(1,1\right)=\left(0,0\right)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+So all three are closed.
+\end_layout
+
+\begin_layout Enumerate
+Associativity: 
+\begin_inset Formula 
+\[
+\forall\left(x,y\right),\left(a,b\right),\left(c,d\right)\in\mathbb{Z}_{2}\oplus\mathbb{Z}_{2}:\left(\left(x,y\right)\odot\left(a,b\right)\right)\odot\left(c,d\right)=\left(x+a,y+b\right)\odot\left(c,d\right)=\left(\left(x+a\right)+c,\left(y+b\right)+d\right)=
+\]
+
+\end_inset
+
+due to 
+\begin_inset Formula $\mathbb{Z}_{2}$
+\end_inset
+
+'s associativity under 
+\begin_inset Formula $+$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+=\left(x+\left(a+c\right),y+\left(b+d\right)\right)=\left(x,y\right)\odot\left(a+c,b+d\right)=\left(x,y\right)\odot\left(\left(a,b\right)\odot\left(c,d\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Identity: 
+\begin_inset Formula $\left(0,0\right)$
+\end_inset
+
+ is the identity in 
+\begin_inset Formula $\mathbb{Z}_{2}\oplus\mathbb{Z}_{2}$
+\end_inset
+
+ and since the sets we mentioned are subsets, then ofc 
+\begin_inset Formula $\forall\left(x,y\right)$
+\end_inset
+
+ in one of those sets, 
+\begin_inset Formula $\left(0,0\right)\odot\left(x,y\right)=\left(x,y\right)\odot\left(0,0\right)=\left(x,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Inverse: This is actually demonstrated when we proved the sets are closed.
+ 
+\begin_inset Formula $\left(0,0\right)\odot\left(0,0\right)=\left(0,1\right)\odot\left(0,1\right)=\left(1,0\right)\odot\left(1,0\right)=\left(1,1\right)\odot\left(1,1\right)=\left(0,0\right)$
+\end_inset
+
+.
+ This is ofc due to 
+\begin_inset Formula $1+1=0+0=0\left(\mod2\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Thus, 
+\begin_inset Formula $\begin{array}{c}
+\left\{ \left(0,0\right),\left(0,1\right)\right\} \\
+\left\{ \left(0,0\right),\left(1,0\right)\right\} \\
+\left\{ \left(0,0\right),\left(1,1\right)\right\} 
+\end{array}$
+\end_inset
+
+ are groups.
 \end_layout
 
 \end_body
