@@ -1094,5 +1094,103 @@ So we got
 This concludes the proof (isn't the first version much nicer?).
 \end_layout
 
+\begin_layout Subsection
+RTP: 
+\begin_inset Formula $\left[G:H\right]$
+\end_inset
+
+ and write a delegate for each coset.
+\end_layout
+
+\begin_layout Proof
+These are delegate we're going to use 
+\begin_inset Formula $\left(0,0\right),\left(0,1\right),\left(0,2\right),\left(1,0\right),\left(1,1\right),\left(1,2\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+for any other number 
+\begin_inset Formula $\left(a,b\right)\in G$
+\end_inset
+
+, we will be able to find 
+\begin_inset Formula $\left(2n,3m\right)\in H$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\left(a-2n,b-3m\right)$
+\end_inset
+
+ will equal to one of the above.
+ This is because 
+\begin_inset Formula $a-2n\mod2\in\left\{ 0,1\right\} $
+\end_inset
+
+ and similarly 
+\begin_inset Formula $b-3m\mod3\in\left\{ 0,1,2\right\} $
+\end_inset
+
+.
+ Thus, there will be 
+\begin_inset Formula $6$
+\end_inset
+
+ cosets.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left(0,0\right)H=\left\{ \left(0+2a,0+3b\right)=\left(2a,3b\right)\mid\left(2a,3b\right)\in H\right\} =H
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(0,1\right)H=\left\{ \left(0+2a,1+3b\right)=\left(2a,3b+1\right)\mid\left(2a,3b\right)\in H\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(0,2\right)H=\left\{ \left(0+2a,2+3b\right)=\left(2a,3b+2\right)\mid\left(2a,3b\right)\in H\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(1,0\right)H=\left\{ \left(1+2a,0+3b\right)=\left(2a+1,3b\right)\mid\left(2a,3b\right)\in H\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(1,1\right)H=\left\{ \left(1+2a,1+3b\right)=\left(2a+1,3b+1\right)\mid\left(2a,3b\right)\in H\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(1,2\right)H=\left\{ \left(1+2a,2+3b\right)=\left(2a+1,3b+2\right)\mid\left(2a,3b\right)\in H\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
