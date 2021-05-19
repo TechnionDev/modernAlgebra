@@ -1120,11 +1120,11 @@ RTP:
 \begin_inset Formula $\left[G:H\right]$
 \end_inset
 
- and write a delegate for each coset.
+ and write a representative for each coset.
 \end_layout
 
 \begin_layout Proof
-These are delegate we're going to use 
+These are representatives we're going to use 
 \begin_inset Formula $\left(0,0\right),\left(0,1\right),\left(0,2\right),\left(1,0\right),\left(1,1\right),\left(1,2\right)$
 \end_inset
 
