@@ -84,7 +84,7 @@ figs-within-sections
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
-\paperpagestyle default
+\paperpagestyle plain
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -93,6 +93,73 @@ figs-within-sections
 \end_header
 
 \begin_body
+
+\begin_layout Title
+
+\size giant
+Modern Algebra HW3
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+
+\size largest
+18/05/2021
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<row topspace="2cm">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size huge
+Yosef Goren - 211515606
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="1cm">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size huge
+Gur Telem - 206631848
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Standard
 \begin_inset FormulaMacro
@@ -107,6 +174,52 @@ figs-within-sections
 \begin_inset FormulaMacro
 \newcommand{\und}[2]{}
 {\underset{#2}{\underbrace{#1}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Z}{}
+{\mathbb{Z}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\N}{}
+{\mathbb{N}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\C}{}
+{\mathbb{C}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\P}{}
+{\mathbb{P}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\Q}{}
+{\mathbb{Q}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\R}{}
+{\mathbb{R}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -316,6 +429,669 @@ Given
 
 .
  
+\end_layout
+
+\begin_layout Proof
+Intuition: 
+\begin_inset Formula $m\mathbb{Z}$
+\end_inset
+
+ is all the numbers that are multiples of 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Like wise 
+\begin_inset Formula $n\mathbb{Z}$
+\end_inset
+
+ are the multiples of 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $m\mathbb{Z}\cap n\mathbb{Z}$
+\end_inset
+
+ are the common multiples.
+ All the common multiples must be a multiple of the lowest common multiple,
+ meaning 
+\begin_inset Formula $m\mathbb{Z}\cap n\mathbb{Z}=\left[m,n\right]\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let's prove it.
+ Let 
+\begin_inset Formula $k\in m\mathbb{Z}\cap n\mathbb{Z}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $k\in m\mathbb{Z}\wedge k\in n\mathbb{Z}$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\exists t,s\in\mathbb{Z}:mt=ns=k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+This means that 
+\begin_inset Formula $m\mid k\wedge n\mid k\Longrightarrow\left[m,n\right]\mid k$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $k\in\left[m,n\right]\mathbb{Z}$
+\end_inset
+
+ (from the definition of LCM).
+\end_layout
+
+\begin_layout Proof
+Now let 
+\begin_inset Formula $c\in\left[m,n\right]\mathbb{Z}$
+\end_inset
+
+.
+ Meaning 
+\begin_inset Formula $\left[m,n\right]\mid c$
+\end_inset
+
+ but 
+\begin_inset Formula $m\mid\left[m,n\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $n\mid\left[m,n\right]$
+\end_inset
+
+ so 
+\begin_inset Formula $n\mid c$
+\end_inset
+
+ and 
+\begin_inset Formula $m\mid c$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula 
+\[
+\exists t,s\in\mathbb{Z}:tn=sm=c\Longrightarrow c\in m\mathbb{Z}\wedge c\in n\mathbb{Z}\Longrightarrow c\in m\mathbb{Z}\cap n\mathbb{Z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+In conclusion 
+\begin_inset Formula 
+\[
+m\mathbb{Z}\cap n\mathbb{Z}\subseteq\left[m,n\right]\mathbb{Z}\wedge m\mathbb{Z}\cap n\mathbb{Z}\supseteq\left[m,n\right]\mathbb{Z}\Longrightarrow m\mathbb{Z}\cap n\mathbb{Z}=\left[m,n\right]\mathbb{Z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Given 
+\begin_inset Formula $G$
+\end_inset
+
+ group and 
+\begin_inset Formula $\left|G\right|=15$
+\end_inset
+
+.
+ Also 
+\begin_inset Formula $G$
+\end_inset
+
+ has a single subgroup 
+\begin_inset Formula $\left|H_{1}\right|=3$
+\end_inset
+
+ and a single 
+\begin_inset Formula $\left|H_{2}\right|=5$
+\end_inset
+
+.
+ RTP 
+\begin_inset Formula $G$
+\end_inset
+
+ is cyclic.
+\end_layout
+
+\begin_layout Standard
+In other words 
+\begin_inset Formula $\exists a\in G:\left\langle a\right\rangle =15$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Standard
+Given the group 
+\begin_inset Formula $U_{27}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+RTP: 
+\begin_inset Formula $o\left(2\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $U_{27}$
+\end_inset
+
+.
+ Is 
+\begin_inset Formula $U_{27}$
+\end_inset
+
+ cyclic?
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\left\langle 2\right\rangle =\left\{ 1,2,4,8,16,5,10,20,13,26,25,23,19,11,22,17,7,14\right\} $
+\end_inset
+
+ (from immediete calculations in excel.
+ Also note that 
+\begin_inset Formula $\underset{n}{\text{argmin}}\left(2^{n}\mod27=1\right)=18$
+\end_inset
+
+).
+ So 
+\begin_inset Formula $o\left(2\right)=18$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+But from Lagrange theorem, 
+\begin_inset Formula $o\left(2\right)=18\mid\left|U_{27}\right|$
+\end_inset
+
+.
+ But ofc 
+\begin_inset Formula $\left|U_{27}\right|\leq26$
+\end_inset
+
+ because there are only 
+\begin_inset Formula $26$
+\end_inset
+
+ elements smaller than 
+\begin_inset Formula $27$
+\end_inset
+
+.
+ It's also known that 
+\begin_inset Formula $o\left(2\right)\leq\left|U_{27}\right|$
+\end_inset
+
+ because 
+\begin_inset Formula $\left\langle 2\right\rangle \subseteq U_{27}$
+\end_inset
+
+.
+ The only multiple of 
+\begin_inset Formula $18$
+\end_inset
+
+ which is between 
+\begin_inset Formula $18$
+\end_inset
+
+ and 
+\begin_inset Formula $27$
+\end_inset
+
+ is 
+\begin_inset Formula $18$
+\end_inset
+
+.
+ so 
+\begin_inset Formula $o\left(2\right)=\left|U_{27}\right|$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $U_{27}$
+\end_inset
+
+ is cyclic.
+\end_layout
+
+\begin_layout Subsection
+RTP: 
+\begin_inset Formula $o\left(16\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Again using excel 
+\begin_inset Formula $\left\langle 16\right\rangle =\left\{ 1,16,13,19,7,4,10,25,22\right\} $
+\end_inset
+
+.
+ Which means that 
+\begin_inset Formula $o\left(16\right)=9$
+\end_inset
+
+.
+ Also note that 
+\begin_inset Formula 
+\[
+\underset{n}{\text{argmin}}\left(16^{n}\mod27=1\right)=9
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+This also makes sense because 
+\begin_inset Formula $9\mid18$
+\end_inset
+
+ which complies with Lagrange theorem.
+\end_layout
+
+\begin_layout Subsection
+RTP: 
+\begin_inset Formula $0<a<27$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $2^{27}\equiv a\left(\mod27\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+2^{27}=2^{18+9}=1\cdot2^{9}=\und{26}{512\mod27}\left(\mod27\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So for 
+\begin_inset Formula $0<a=26<27:2^{27}\equiv a\left(\mod27\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Standard
+Given 
+\begin_inset Formula $G=\mathbb{Z}\oplus\mathbb{Z}$
+\end_inset
+
+ and 
+\begin_inset Formula $H=2\mathbb{Z}\oplus3\mathbb{Z}\subseteq G$
+\end_inset
+
+ a subgroup.
+\end_layout
+
+\begin_layout Subsection
+RTP: Is 
+\begin_inset Formula $\left(1,4\right)H=\left(13,13\right)H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+For 
+\begin_inset Formula $6,3\in\mathbb{Z}$
+\end_inset
+
+ we get 
+\begin_inset Formula $\left(2\cdot6,3\cdot3\right)=\left(12,9\right)\in2\mathbb{Z}\oplus3\mathbb{Z}$
+\end_inset
+
+.
+ So we get 
+\begin_inset Formula $\left(1,4\right)+\left(12,9\right)=\left(13,13\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let's look at 
+\begin_inset Formula 
+\[
+\left(12,9\right)H=\left(12,9\right)\left\{ \left(2a,3b\right)\mid a,b\in\mathbb{Z}\right\} =\left\{ \left(12,9\right)+\left(2a,3b\right)\mid a,b\in\mathbb{Z}\right\} =\left\{ \left(12+2a,9+3b\right)\mid a,b\in\mathbb{Z}\right\} =
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left\{ \left(2\left(6+a\right),3\left(3+b\right)\right)\mid a,b\in\mathbb{Z}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+But for each 
+\begin_inset Formula $c,d\in\mathbb{Z}$
+\end_inset
+
+ we can find 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $6+a=c\wedge3+b=d$
+\end_inset
+
+ (and ofc vice versa).
+ And thus
+\begin_inset Formula 
+\[
+\left\{ \left(2\left(6+a\right),3\left(3+b\right)\right)\mid a,b\in\mathbb{Z}\right\} =\left\{ \left(2c,3d\right)\mid c,d\in\mathbb{Z}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So we got that 
+\begin_inset Formula $\left(12,9\right)H=H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Now let's look at 
+\begin_inset Formula 
+\[
+\left(4,1\right)H=\left(4,1\right)\left(12,9\right)H=\left\{ \left(4,1\right)+\left(12,9\right)+\left(2a,3b\right)\mid a,b\in\mathbb{Z}\right\} =\left\{ \left(13,13\right)+\left(2a,3b\right)\mid a,b\in\mathbb{Z}\right\} =\left(13,13\right)H
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Given 
+\begin_inset Formula $\left(a,b\right),\left(c,d\right)\in G$
+\end_inset
+
+.
+ RTP: Find necessary sufficient condition for 
+\begin_inset Formula $\left(a,b\right)H=\left(c,d\right)H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+This is super easy 
+\begin_inset Formula $\left(a,b\right)H=\left(c,d\right)H\Longleftrightarrow\left(a,b\right)H\subseteq\left(c,d\right)H\enskip\wedge\enskip\left(a,b\right)H\supseteq\left(c,d\right)H$
+\end_inset
+
+.
+ DONE!
+\end_layout
+
+\begin_layout Proof
+Now seriously.
+ The necessary sufficient condition would be if 
+\begin_inset Formula $\exists\left(2n,3m\right)\in H:\left(2n,3m\right)+\left(a,b\right)=\left(c,d\right)$
+\end_inset
+
+.
+ Or in other words 
+\begin_inset Formula $\left(a-c,b-d\right)\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+RTP 
+\begin_inset Formula $\left(a-c,b-d\right)\in H\Longleftrightarrow\left(a,b\right)H=\left(c,d\right)H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let's assume 
+\begin_inset Formula $\left(a-c,b-d\right)\in H$
+\end_inset
+
+.
+ Similarly to before: let 
+\begin_inset Formula $k,t\in\Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left(a-c,b-d\right)H=\left\{ \left(a-c,b-d\right)+h\mid h\in H\right\} =\left\{ \left(a-c,b-d\right)+\left(2k,3l\right)\mid k,l\in\Z\right\} =\left\{ \left(a-c+2k,b-d+3l\right)\mid k,l\in\Z\right\} 
+\]
+
+\end_inset
+
+ But 
+\begin_inset Formula $2\mid a-c$
+\end_inset
+
+ because of the assumption and similarly 
+\begin_inset Formula $3\mid b-d$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $\exists s,t\in\Z:a-c=2s\wedge b-d=3t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula 
+\[
+\left\{ \left(a-c+2k,b-d+3l\right)\mid k,l\in\Z\right\} =\left\{ \left(2s+2k,3t+3l\right)\mid k,l\in\Z\right\} =\left\{ \left(2\left(s+k\right),3\left(t+l\right)\right)\mid k,l\in\Z\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+And like we explained in the previous section, for a constant 
+\begin_inset Formula $m\in\Z$
+\end_inset
+
+, we can represent each number in 
+\begin_inset Formula $\Z$
+\end_inset
+
+ as a sum of 
+\begin_inset Formula $n\in\Z$
+\end_inset
+
+ and 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ And each sum is ofc a number in 
+\begin_inset Formula $\Z$
+\end_inset
+
+.
+ So this gives us 
+\begin_inset Formula 
+\[
+\left\{ \left(2\left(s+k\right),3\left(t+l\right)\right)\mid k,l\in\Z\right\} =\left\{ \left(2n,3m\right)\mid n,m\in\Z\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $\left(a,b\right)H=\left(a,b\right)\left(a-c,b-d\right)H=\left(c,d\right)H$
+\end_inset
+
+ like before.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Longleftarrow$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let's assume 
+\begin_inset Formula $\left(a,b\right)H=\left(c,d\right)H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\left(k,l\right)\in\Z\oplus\Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left(k,l\right)\in\left(a,b\right)H\Leftrightarrow\left(k,l\right)\in\left(c,d\right)H
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\left(k,l\right)\in\left(a,b\right)H\Leftrightarrow\exists\left(2n,3m\right)\in H:\left(a,b\right)+\left(2n,3m\right)=\left(k,l\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+And similarly
+\begin_inset Formula $\exists\left(2s,3t\right)\in H:\left(c,d\right)+\left(2s,3t\right)=\left(k,l\right)$
+\end_inset
+
+ because of our assumption.
+\end_layout
+
+\begin_layout Proof
+Now we get 
+\begin_inset Formula $\left(c,d\right)+\left(2s,3t\right)=\left(k,l\right)=\left(a,b\right)+\left(2n,3m\right)$
+\end_inset
+
+ meaning 
+\begin_inset Formula 
+\[
+\left(a-c,b-d\right)=\left(2s-2n,3t-3m\right)=\left(2\left(s-n\right),3\left(t-m\right)\right)\in H
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Because 
+\begin_inset Formula $t-m,s-n\in\Z.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+So we got 
+\begin_inset Formula $\left(a-c,b-d\right)\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+This concludes the proof (isn't the first version much nicer?).
 \end_layout
 
 \end_body
