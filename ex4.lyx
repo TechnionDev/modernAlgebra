@@ -1,0 +1,1092 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\begin_preamble
+\usepackage{xcolor}
+\pagecolor[rgb]{0.15,0.15,0.15} %black
+\color[rgb]{1,1,1} %grey
+
+\newfontfamily\mylistingsfont{Ubuntu Mono derivative Powerline}
+\definecolor{lbcolor}{rgb}{0.2,0.2,0.2}  
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\size giant
+Modern Algebra HW4
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+
+\size largest
+04/06/2021
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0pt">
+<row topspace="2cm">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size huge
+Yosef Goren - 211515606
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="1cm">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size huge
+Gur Telem - 206631848
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\undeq}[1]{}
+{\underset{#1}{\underbrace{=}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\und}[2]{}
+{\underset{#2}{\underbrace{#1}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Z}{}
+{\mathbb{Z}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\N}{}
+{\mathbb{N}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\C}{}
+{\mathbb{C}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\P}{}
+{\mathbb{P}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\Q}{}
+{\mathbb{Q}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\R}{}
+{\mathbb{R}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Standard
+Given 
+\begin_inset Formula $\alpha=\left(9\,3\,4\,7\,5\right)\left(7\,1\,3\,5\,9\,2\right)\in S_{9}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Calculate the order of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ and its parity.
+\end_layout
+
+\begin_layout Proof
+Let's write 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ as in c more comfortable form
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9\\
+3 & 7 & 5 & 4 & 9 & 6 & 1 & 8 & 2\\
+4 & 5 & 9 & 7 & 3 & 6 & 1 & 8 & 2
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+And from here as disjoint cycles
+\begin_inset Formula 
+\[
+\alpha=\left(1\,4\,7\right)\left(2\,5\,3\,9\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+ord\left(\alpha\right)=\left[3,4\right]=12
+\]
+
+\end_inset
+
+ And the parity is odd because 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is built of two cycles, one with even parity and the other with odd parity
+ (
+\begin_inset Formula $3$
+\end_inset
+
+-cycle is even parity and 
+\begin_inset Formula $4$
+\end_inset
+
+-cycle is odd).
+ Together they give an odd parity permutation.
+\end_layout
+
+\begin_layout Subsection
+Calculate the order of 
+\begin_inset Formula $\alpha^{22}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We the that 
+\begin_inset Formula $ord\left(\alpha\right)=12$
+\end_inset
+
+ so 
+\begin_inset Formula $\alpha^{12}=e$
+\end_inset
+
+.
+ So 
+\begin_inset Formula 
+\[
+\alpha^{22}=\alpha^{12}\alpha^{10}=e\alpha^{10}=\left(1\,4\,7\right)^{10}\left(2\,5\,3\,9\right)^{10}
+\]
+
+\end_inset
+
+Tthe last one because the cycles are disjoint.
+\end_layout
+
+\begin_layout Proof
+But 
+\begin_inset Formula $ord\left(\left(1\,4\,7\right)\right)=3\wedge ord\left(\left(2\,5\,3\,9\right)\right)=4$
+\end_inset
+
+.
+ So 
+\begin_inset Formula 
+\[
+\left(1\,4\,7\right)^{10}=\left(1\,4\,7\right)^{9}\left(1\,4\,7\right)=e^{3}\left(1\,4\,7\right)=\left(1\,4\,7\right)
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\left(2\,5\,3\,9\right)^{10}=\left(2\,5\,3\,9\right)^{8}\left(2\,5\,3\,9\right)^{2}=e^{2}\left(2\,5\,3\,9\right)^{2}=\left(2\,5\,3\,9\right)^{2}=\left(2\,3\right)\left(5\,9\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+And we get 
+\begin_inset Formula $\alpha^{22}=\left(1\,4\,7\right)\left(2\,3\right)\left(5\,9\right)$
+\end_inset
+
+.
+ And the order of that 
+\begin_inset Formula 
+\[
+ord\left(\alpha^{22}\right)=ord\left(\left(1\,4\,7\right)\left(2\,3\right)\left(5\,9\right)\right)=\left[3,2,2\right]=6
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Find 
+\begin_inset Formula $\beta\in S_{9}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\beta^{5}=\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We know that 
+\begin_inset Formula $\left(2\,5\,3\,9\right)^{5}=\left(2\,5\,3\,9\right)$
+\end_inset
+
+.
+ So we only need to find a disjoin cycle for which the 
+\begin_inset Formula $5$
+\end_inset
+
+th exponent is 
+\begin_inset Formula $\left(1\,4\,7\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+For a 
+\begin_inset Formula $3$
+\end_inset
+
+-cycle, the order is 
+\begin_inset Formula $3$
+\end_inset
+
+.
+ So the 
+\begin_inset Formula $5$
+\end_inset
+
+th exponent is the same as the 
+\begin_inset Formula $2$
+\end_inset
+
+nd exponent.
+ So if we take 
+\begin_inset Formula $\left(1\,7\,4\right)$
+\end_inset
+
+ then we get 
+\begin_inset Formula $\left(1\,7\,4\right)^{5}=\left(1\,7\,4\right)^{2}=\left(1\,4\,7\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+So we found 
+\begin_inset Formula 
+\[
+\beta=\left(2\,5\,3\,9\right)\left(1\,7\,4\right)
+\]
+
+\end_inset
+
+s.t.
+ 
+\begin_inset Formula $\beta^{5}=\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Subsection
+Is the a cyclic subgroup of order 
+\begin_inset Formula $6$
+\end_inset
+
+ in 
+\begin_inset Formula $S_{5}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Proof
+Yes, there is.
+ Let's look at 
+\begin_inset Formula $\alpha=\left(1\,2\,3\right)\left(4\,5\right)$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $\left[3,2\right]=6$
+\end_inset
+
+ so 
+\begin_inset Formula $ord\left(\alpha\right)=6$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $ord\left(\left\langle \alpha\right\rangle \right)=6$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Is the a cyclic subgroup of order 
+\begin_inset Formula $6$
+\end_inset
+
+ in 
+\begin_inset Formula $A_{7}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Proof
+Yes, there is.
+ Let's look at 
+\begin_inset Formula $\beta=\left(1\,2\,3\right)\left(4\,5\right)\left(6\,7\right)$
+\end_inset
+
+.
+ The permutation is even because it's made of two odd permutations and an
+ even permutation.
+\end_layout
+
+\begin_layout Proof
+Also, 
+\begin_inset Formula $ord\left(\beta\right)=6$
+\end_inset
+
+ because 
+\begin_inset Formula $\left[3,2,2\right]=6$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $ord\left(\left\langle \beta\right\rangle \right)=6$
+\end_inset
+
+ and it is 
+\begin_inset Formula $A_{7}$
+\end_inset
+
+ because 
+\begin_inset Formula $\beta\in A_{7}$
+\end_inset
+
+ (as we mentioned before) and 
+\begin_inset Formula $A_{7}$
+\end_inset
+
+ is closed.
+\end_layout
+
+\begin_layout Subsection
+Find all the permutations 
+\begin_inset Formula $\tau\in S_{6}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\tau\left(1\,2\right)\left(3\,4\right)\tau^{-1}=\left(5\,6\right)\left(1\,3\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+So we need to comply with 
+\begin_inset Formula $\left(\tau\left(1\right)\,\tau\left(2\right)\right)\left(\tau\left(3\right)\,\tau\left(4\right)\right)=\left(5\,6\right)\left(1\,3\right)=\left(1\,3\right)\left(5\,6\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let's look at the possible options (each column is an option):
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+\begin{array}{cccccccc}
+\tau\left(1\right)=5 & \tau\left(1\right)=6 & \tau\left(1\right)=5 & \tau\left(1\right)=6 & \tau\left(1\right)=5 & \tau\left(1\right)=6 & \tau\left(1\right)=5 & \tau\left(1\right)=6\\
+\tau\left(2\right)=6 & \tau\left(2\right)=5 & \tau\left(2\right)=6 & \tau\left(2\right)=5 & \tau\left(2\right)=6 & \tau\left(2\right)=5 & \tau\left(2\right)=6 & \tau\left(2\right)=5\\
+\tau\left(3\right)=1 & \tau\left(3\right)=1 & \tau\left(3\right)=3 & \tau\left(3\right)=3 & \tau\left(3\right)=1 & \tau\left(3\right)=1 & \tau\left(3\right)=3 & \tau\left(3\right)=3\\
+\tau\left(4\right)=3 & \tau\left(4\right)=3 & \tau\left(4\right)=1 & \tau\left(4\right)=1 & \tau\left(4\right)=3 & \tau\left(4\right)=3 & \tau\left(4\right)=1 & \tau\left(4\right)=1\\
+\tau\left(5\right)=2 & \tau\left(5\right)=2 & \tau\left(5\right)=2 & \tau\left(5\right)=2 & \tau\left(5\right)=4 & \tau\left(5\right)=4 & \tau\left(5\right)=4 & \tau\left(5\right)=4\\
+\tau\left(6\right)=4 & \tau\left(6\right)=4 & \tau\left(6\right)=4 & \tau\left(6\right)=4 & \tau\left(6\right)=2 & \tau\left(6\right)=2 & \tau\left(6\right)=2 & \tau\left(6\right)=2
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+And also
+\begin_inset Formula 
+\[
+\begin{array}{cccccccc}
+\tau\left(1\right)=1 & \tau\left(1\right)=1 & \tau\left(1\right)=3 & \tau\left(1\right)=3 & \tau\left(1\right)=1 & \tau\left(1\right)=1 & \tau\left(1\right)=3 & \tau\left(1\right)=3\\
+\tau\left(2\right)=3 & \tau\left(2\right)=3 & \tau\left(2\right)=1 & \tau\left(2\right)=1 & \tau\left(2\right)=3 & \tau\left(2\right)=3 & \tau\left(2\right)=1 & \tau\left(2\right)=1\\
+\tau\left(3\right)=5 & \tau\left(3\right)=6 & \tau\left(3\right)=5 & \tau\left(3\right)=6 & \tau\left(3\right)=5 & \tau\left(3\right)=6 & \tau\left(3\right)=5 & \tau\left(3\right)=6\\
+\tau\left(4\right)=6 & \tau\left(4\right)=5 & \tau\left(4\right)=6 & \tau\left(4\right)=5 & \tau\left(4\right)=6 & \tau\left(4\right)=5 & \tau\left(4\right)=6 & \tau\left(4\right)=5\\
+\tau\left(5\right)=2 & \tau\left(5\right)=2 & \tau\left(5\right)=2 & \tau\left(5\right)=2 & \tau\left(5\right)=4 & \tau\left(5\right)=4 & \tau\left(5\right)=4 & \tau\left(5\right)=4\\
+\tau\left(6\right)=4 & \tau\left(6\right)=4 & \tau\left(6\right)=4 & \tau\left(6\right)=4 & \tau\left(6\right)=2 & \tau\left(6\right)=2 & \tau\left(6\right)=2 & \tau\left(6\right)=2
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Or in a better form
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+5 & 6 & 1 & 3 & 2 & 4
+\end{array}\right),\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+6 & 5 & 1 & 3 & 2 & 4
+\end{array}\right),\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+6 & 5 & 3 & 1 & 2 & 4
+\end{array}\right),\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+5 & 6 & 3 & 1 & 2 & 4
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+5 & 6 & 1 & 3 & 4 & 2
+\end{array}\right),\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+6 & 5 & 1 & 3 & 4 & 2
+\end{array}\right),\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+6 & 5 & 3 & 1 & 4 & 2
+\end{array}\right),\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+5 & 6 & 3 & 1 & 4 & 2
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+1 & 3 & 5 & 6 & 2 & 4
+\end{array}\right),\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+1 & 3 & 6 & 5 & 2 & 4
+\end{array}\right),\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+3 & 1 & 6 & 5 & 2 & 4
+\end{array}\right),\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+3 & 1 & 5 & 6 & 2 & 4
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+1 & 3 & 5 & 6 & 4 & 2
+\end{array}\right),\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+1 & 3 & 6 & 5 & 4 & 2
+\end{array}\right),\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+3 & 1 & 6 & 5 & 4 & 2
+\end{array}\right),\left(\begin{array}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+3 & 1 & 5 & 6 & 4 & 2
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+At total 8 options.
+\end_layout
+
+\begin_layout Proof
+Here's an example of the first two permutations in cyclic form (just to
+ prove I know how you know)
+\begin_inset Formula 
+\[
+\left(1\,5\,2\,6\,4\,3\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(1\,6\,4\,3\right)\left(2\,5\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Find all the permutations that are commutative in multiplication with 
+\begin_inset Formula $\left(1\,2\,3\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $S_{5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Meaning 
+\begin_inset Formula $\tau\left(1\,2\,3\right)=\left(1\,2\,3\right)\tau\Longrightarrow\tau\left(1\,2\,3\right)\tau^{-1}=\left(1\,2\,3\right)$
+\end_inset
+
+.
+ So
+\begin_inset Formula 
+\[
+\left(\begin{array}{ccccc}
+1 & 2 & 3 & 4 & 5\\
+1 & 2 & 3 & 4 & 5
+\end{array}\right),\left(\begin{array}{ccccc}
+1 & 2 & 3 & 4 & 5\\
+3 & 1 & 2 & 4 & 5
+\end{array}\right),\left(\begin{array}{ccccc}
+1 & 2 & 3 & 4 & 5\\
+2 & 3 & 1 & 4 & 5
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\begin{array}{ccccc}
+1 & 2 & 3 & 4 & 5\\
+1 & 2 & 3 & 5 & 4
+\end{array}\right),\left(\begin{array}{ccccc}
+1 & 2 & 3 & 4 & 5\\
+3 & 1 & 2 & 5 & 4
+\end{array}\right),\left(\begin{array}{ccccc}
+1 & 2 & 3 & 4 & 5\\
+2 & 3 & 1 & 5 & 4
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Total 6 permutations.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Subsection
+Given 
+\begin_inset Formula $N,K\trianglelefteq G$
+\end_inset
+
+
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+.
+ RTP: 
+\begin_inset Formula $N\cap K\trianglelefteq G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in N\cap K$
+\end_inset
+
+.
+ 
+\series bold
+RTP: 
+\begin_inset Formula $g\alpha g^{-1}\in N\cap K$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $\alpha\in N$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in K$
+\end_inset
+
+.
+ From (1) we get that 
+\begin_inset Formula $g\alpha g^{-1}\in N$
+\end_inset
+
+ as well as 
+\begin_inset Formula $g\alpha g^{-1}\in K$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $g\alpha g^{-1}\in N\cap K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let's also note that 
+\begin_inset Formula $N\cap K$
+\end_inset
+
+ is a subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Q.E.D
+\end_layout
+
+\begin_layout Subsection
+Given 
+\begin_inset Formula $H\leq G$
+\end_inset
+
+ and 
+\begin_inset Formula $N\trianglelefteq G$
+\end_inset
+
+.
+ RTP: 
+\begin_inset Formula $N\cap H\trianglelefteq H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\alpha\in N\cap H$
+\end_inset
+
+ (which is a subgroup of 
+\begin_inset Formula $G$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $\alpha\in N$
+\end_inset
+
+
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+(1)
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha\in H$
+\end_inset
+
+
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+(2)
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $h\in H$
+\end_inset
+
+ permutation.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $h\in G$
+\end_inset
+
+ (
+\begin_inset Formula $H\leq G$
+\end_inset
+
+).
+ From (1) we get that 
+\begin_inset Formula $h\alpha h^{-1}\in N$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $H$
+\end_inset
+
+ is closed so 
+\begin_inset Formula $h\alpha h^{-1}\in H$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $h\alpha h^{-1}\in N\cap H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+And we got that 
+\begin_inset Formula $\forall h\in H\forall\alpha\in N\cap H:h\alpha h^{-1}\in N\cap H$
+\end_inset
+
+ (meaning that 
+\begin_inset Formula $N\cap H\trianglelefteq H$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+Q.E.D
+\end_layout
+
+\begin_layout Subsection
+Give an example for a group 
+\begin_inset Formula $G$
+\end_inset
+
+,
+\begin_inset Formula $H\leq G$
+\end_inset
+
+ and 
+\begin_inset Formula $N\trianglelefteq G$
+\end_inset
+
+ but 
+\begin_inset Formula $N\cap H\cancel{\trianglelefteq}G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+For 
+\begin_inset Formula $G=S_{3},H=\left\{ \left(1\,2\right),e\right\} =\left\langle \left(1\,2\right)\right\rangle $
+\end_inset
+
+ and 
+\begin_inset Formula $N=\left\{ \left(1\,2\right),\left(1\,3\right),\left(2\,3\right),e\right\} $
+\end_inset
+
+.
+ It is clear that 
+\begin_inset Formula $N$
+\end_inset
+
+ is normal under 
+\begin_inset Formula $G$
+\end_inset
+
+ because it includes all the permutations of the form 
+\begin_inset Formula $\left(\bullet\,\bullet\right)\in G$
+\end_inset
+
+.
+ It's also clear that 
+\begin_inset Formula $H\leq G$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $N\cap H=H$
+\end_inset
+
+ for which 
+\begin_inset Formula $N\cap H\cancel{\trianglelefteq}G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+The latter is because 
+\begin_inset Formula $H$
+\end_inset
+
+ does 
+\series bold
+not
+\series default
+ include all the permutations in 
+\begin_inset Formula $G$
+\end_inset
+
+ of the from 
+\begin_inset Formula $\left(\bullet\,\bullet\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+And for example for 
+\begin_inset Formula $\left(2\,3\right)\in G$
+\end_inset
+
+, 
+\begin_inset Formula $\left(2\,3\right)\und{\left(1\,2\right)}{\in H}\und{\left(3\,2\right)}{=\left(2\,3\right)^{-1}=\left(2\,3\right)}=\left(1\,3\right)\notin H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Q.E.D
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\end_body
+\end_document
