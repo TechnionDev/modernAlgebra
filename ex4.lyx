@@ -43,7 +43,16 @@ figs-within-sections
 \index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -726,6 +735,13 @@ Find all the permutations that are commutative in multiplication with
 \end_inset
 
 .
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Find-all-the"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Proof
@@ -1086,6 +1102,372 @@ Q.E.D
 
 \begin_layout Section
 Question
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\cg}{}
+{C_{G}\left(a\right)}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\cl}{}
+{Cl_{G}\left(a\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given group 
+\begin_inset Formula $G$
+\end_inset
+
+ and 
+\begin_inset Formula $a\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\cg=\left\{ g\in G\mid ga=ag\right\} ,\,\cl=\left\{ gag^{-1}\mid g\in G\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+RTP: 
+\begin_inset Formula $\cg\leq G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Subsubsection
+Associativity
+\end_layout
+
+\begin_layout Standard
+Directly from associativity of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Closure
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $t,k\in\cg$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\und{ta=at}{given}\Longrightarrow\left(ta\right)k=\left(at\right)k\und ={associatibity\,+\,given}t\left(ka\right)=\left(tk\right)a=a\left(tk\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Identity
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $e\in G$
+\end_inset
+
+ and 
+\begin_inset Formula $\forall a\in G:ae=ea=a$
+\end_inset
+
+ and thus 
+\begin_inset Formula $e\in\cg$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Inverse
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $g\in\cg$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $ga=ag\Longrightarrow gag^{-1}=agg^{-1}=ae=a\Longrightarrow g^{-1}gag^{-1}=g^{-1}a\Longrightarrow eag^{-1}=ag^{-1}=g^{-1}a$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Q.E.D
+\end_layout
+
+\begin_layout Subsection
+Given 
+\begin_inset Formula $G=S_{5}$
+\end_inset
+
+ and 
+\begin_inset Formula $a=\left(1\,2\,3\right)$
+\end_inset
+
+.
+ Calculate 
+\begin_inset Formula $\left|\cg\right|$
+\end_inset
+
+ and 
+\begin_inset Formula $\left|\cl\right|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We calculated 
+\begin_inset Formula $\cg$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Find-all-the"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\left|\cg\right|=6$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Regarding 
+\begin_inset Formula $\cl$
+\end_inset
+
+, it's all the permutations of the form 
+\begin_inset Formula $\left(\bullet\,\bullet\,\bullet\right)$
+\end_inset
+
+ and there are 
+\begin_inset Formula ${5 \choose 3}$
+\end_inset
+
+ choices for different elements there.
+ And For each choice, there are two options for different permutations:
+ the second lowest is after the lowest value, or the highest value is after
+ the lowest value.
+ Either one of these choices define the order of the triplet.
+\end_layout
+
+\begin_layout Standard
+So in total 
+\begin_inset Formula $2\cdot{5 \choose 3}=20$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $\left|\cl\right|=20$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+And 
+\begin_inset Formula $20=\left|\cl\right|=\frac{\left|S_{5}\right|}{\left|\cg\right|}=\frac{5!}{6}=\frac{120}{6}$
+\end_inset
+
+ like we expect.
+\end_layout
+
+\begin_layout Subsection
+Given 
+\begin_inset Formula $G$
+\end_inset
+
+ final.
+ RTP: 
+\begin_inset Formula $\left|\cl\right|=\frac{\left|G\right|}{\left|\cg\right|}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Meaning we would like to prove that the index of 
+\begin_inset Formula $\cg$
+\end_inset
+
+ in 
+\begin_inset Formula $G$
+\end_inset
+
+ is 
+\begin_inset Formula $\left|\cl\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We'll define 
+\begin_inset Formula $f:\frac{G}{\cg}\rightarrow\cl$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $f\left(g\cg\right)=gag^{-1}$
+\end_inset
+
+ and we'll prove that 
+\begin_inset Formula $f$
+\end_inset
+
+ is a well defined bijection.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $g\cg$
+\end_inset
+
+ coset of 
+\begin_inset Formula $G$
+\end_inset
+
+ (each coset can be written as such).
+ According to 
+\begin_inset Formula $f$
+\end_inset
+
+'s definition, 
+\begin_inset Formula $f\left(g\cg\right)=gag^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $g_{1},g_{2}\in\cg$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $g_{1}\cg=g_{2}\cg$
+\end_inset
+
+, RTP: 
+\begin_inset Formula $g_{1}ag_{1}^{-1}=g_{2}ag_{2}^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We got
+\begin_inset Formula 
+\[
+g_{1}\cg=g_{2}\cg\Longleftrightarrow g_{1}^{-1}g_{2}\in\cg\Longleftrightarrow g_{1}^{-1}g_{2}a=ag_{1}^{-1}g_{2}\Longleftrightarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Longleftrightarrow g_{1}^{-1}g_{2}ag_{2}^{-1}=ag_{1}^{-1}\Longleftrightarrow eg_{2}ag_{2}^{-1}=g_{2}ag_{2}^{-1}=g_{1}ag_{1}^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Meaning that we proved that 
+\begin_inset Formula $f$
+\end_inset
+
+ is both defined and injective.
+\end_layout
+
+\begin_layout Proof
+Now for surjectiveness:
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $t\in\cl$
+\end_inset
+
+ so 
+\begin_inset Formula $\exists g\in G$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $gag^{-1}=t$
+\end_inset
+
+.
+ Thus for 
+\begin_inset Formula $g\cg\in\frac{G}{\cg}:f\left(g\cg\right)=gag^{-1}=t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $\left|\cl\right|=\left|\frac{G}{\cg}\right|=\left[G:\cg\right]=\frac{\left|G\right|}{\left|\cg\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Q.E.D
 \end_layout
 
 \end_body
