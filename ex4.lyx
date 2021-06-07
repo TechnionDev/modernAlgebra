@@ -172,8 +172,12 @@ Gur Telem - 206631848
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\undeq}[1]{}
-{\underset{#1}{\underbrace{=}}}
+\newcommand{\undeq}[1]{\underset{#1}{\underbrace{=}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\und}[2]{\underset{#2}{\underbrace{#1}}}
 \end_inset
 
 
@@ -181,47 +185,32 @@ Gur Telem - 206631848
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\und}[2]{}
-{\underset{#2}{\underbrace{#1}}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\Z}{}
-{\mathbb{Z}}
+\newcommand{\Z}{\mathbb{Z}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\N}{}
-{\mathbb{N}}
+\newcommand{\N}{\mathbb{N}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\C}{}
-{\mathbb{C}}
+\newcommand{\C}{\mathbb{C}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\P}{}
-{\mathbb{P}}
+\newcommand{\P}{\mathbb{P}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\Q}{}
-{\mathbb{Q}}
+\newcommand{\Q}{\mathbb{Q}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\R}{}
-{\mathbb{R}}
+\newcommand{\R}{\mathbb{R}}
 \end_inset
 
 
@@ -334,7 +323,7 @@ We the that
 
 \end_inset
 
-Tthe last one because the cycles are disjoint.
+The last one because the cycles are disjoint.
 \end_layout
 
 \begin_layout Proof
@@ -1106,14 +1095,12 @@ Question
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\cg}{}
-{C_{G}\left(a\right)}
+\newcommand{\cg}{C_{G}\left(a\right)}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\cl}{}
-{Cl_{G}\left(a\right)}
+\newcommand{\cl}{Cl_{G}\left(a\right)}
 \end_inset
 
 
@@ -1165,18 +1152,6 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout Subsubsection
-Associativity
-\end_layout
-
-\begin_layout Standard
-Directly from associativity of 
-\begin_inset Formula $G$
-\end_inset
-
-.
-\end_layout
-
 \begin_layout Subsubsection
 Closure
 \end_layout
